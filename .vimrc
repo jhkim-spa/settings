@@ -20,19 +20,24 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'sainnhe/sonokai'
 Plugin 'frazrepo/vim-rainbow'
-Plugin 'morhetz/gruvbox'
 Plugin 'zxqfl/tabnine-vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'majutsushi/tagbar'
 Plugin 'szw/vim-maximizer'
+" Color Schemes
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'tomasr/molokai'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'morhetz/gruvbox'
+Plugin 'cocopon/iceberg.vim'
+Plugin 'joshdick/onedark.vim'
+Plugin 'arcticicestudio/nord-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+set background=dark
+colorscheme onedark
 
-colorscheme jellybeans
 set termguicolors
 let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
@@ -50,6 +55,7 @@ let mapleader = " "
 set noerrorbells
 set encoding=utf-8
 set nu
+set relativenumber
 set hlsearch
 set incsearch
 set ignorecase
@@ -83,6 +89,7 @@ syntax on
 " SimpylFold
 let g:SimpylFold_docstring_preview=1
 " Nerdtree
+let g:NERDTreeWinSize=20
 nnoremap <leader>rc :rightbelow vnew $MYVIMRC<CR>
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
