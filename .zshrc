@@ -34,6 +34,7 @@ alias sd='sudo docker'
 
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
+export PATH="$PATH:$HOME/ .local/bin"
 
 # esc for accepting autosuggestion
 bindkey '`' autosuggest-accept
