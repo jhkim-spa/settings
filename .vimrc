@@ -32,15 +32,29 @@ Plugin 'morhetz/gruvbox'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'arcticicestudio/nord-vim'
+Plugin 'apalmer1377/factorus'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 set background=dark
-colorscheme onedark
+colorscheme gruvbox
 
 set termguicolors
 let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
 let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+
+" close parenthesis
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
+" comment
+vnoremap <silent> # :s/^/# /<cr>:noh<cr>
+vnoremap <silent> -# :s/^# //<cr>:noh<cr>
 
 " highligh current line
 set cursorline
