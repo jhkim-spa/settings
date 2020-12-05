@@ -12,7 +12,6 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'Valloric/YouCompleteMe'
 Plugin 'tmhedberg/SimpylFold'
 Plugin 'vim-scripts/indentpython.vim'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
@@ -24,6 +23,9 @@ Plugin 'zxqfl/tabnine-vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'majutsushi/tagbar'
 Plugin 'szw/vim-maximizer'
+Plugin 'apalmer1377/factorus'
+Plugin 'bagrat/vim-buffet'
+Plugin 'dense-analysis/ale'
 " Color Schemes
 Plugin 'dracula/vim', {'name': 'dracula'}
 Plugin 'tomasr/molokai'
@@ -32,7 +34,6 @@ Plugin 'morhetz/gruvbox'
 Plugin 'cocopon/iceberg.vim'
 Plugin 'joshdick/onedark.vim'
 Plugin 'arcticicestudio/nord-vim'
-Plugin 'apalmer1377/factorus'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -131,3 +132,22 @@ map <F12> :TagbarToggle<CR>
 let g:tagbar_width=40
 " Maximizer
 nnoremap <leader>m :MaximizerToggle<CR>
+" vim-buffet
+nmap <leader>1 <Plug>BuffetSwitch(1)
+nmap <leader>2 <Plug>BuffetSwitch(2)
+nmap <leader>3 <Plug>BuffetSwitch(3)
+nmap <leader>4 <Plug>BuffetSwitch(4)
+nmap <leader>5 <Plug>BuffetSwitch(5)
+nmap <leader>6 <Plug>BuffetSwitch(6)
+nmap <leader>7 <Plug>BuffetSwitch(7)
+nmap <leader>8 <Plug>BuffetSwitch(8)
+nmap <leader>9 <Plug>BuffetSwitch(9)
+nmap <leader>0 <Plug>BuffetSwitch(10)
+let g:buffet_powerline_separators=1
+let g:buffet_show_index=1
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
+noremap <Leader><Tab> :Bw<CR>
+noremap <Leader><S-Tab> :Bw!<CR>
+noremap <C-t> :tabnew split<CR>
+
