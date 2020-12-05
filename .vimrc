@@ -151,3 +151,8 @@ noremap <Leader><Tab> :Bw<CR>
 noremap <Leader><S-Tab> :Bw!<CR>
 noremap <C-t> :tabnew split<CR>
 
+function! g:BuffetSetCustomColors()
+  hi! BuffetCurrentBuffer cterm=NONE ctermbg=1 ctermfg=1 guibg=#afd700 guifg=#005f00
+  hi! BuffetTab cterm=NONE ctermbg=1 ctermfg=1 guibg=#03a9fc guifg=#005f00
+  hi! BuffetActiveBuffer cterm=NONE ctermbg=1 ctermfg=1 guibg=#dff28d guifg=#005f00
+endfunction
