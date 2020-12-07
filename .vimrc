@@ -19,7 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'sainnhe/sonokai'
 Plugin 'frazrepo/vim-rainbow'
-Plugin 'zxqfl/tabnine-vim'
+"Plugin 'zxqfl/tabnine-vim'
 Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'majutsushi/tagbar'
 Plugin 'szw/vim-maximizer'
@@ -156,3 +156,11 @@ function! g:BuffetSetCustomColors()
   hi! BuffetTab cterm=NONE ctermbg=1 ctermfg=1 guibg=#03a9fc guifg=#005f00
   hi! BuffetActiveBuffer cterm=NONE ctermbg=1 ctermfg=1 guibg=#dff28d guifg=#005f00
 endfunction
+
+" Kite
+let g:kite_tab_complete=1
+set completeopt+=menuone
+set completeopt+=noselect
+set completeopt+=noinsert
+set completeopt+=preview
+autocmd CompleteDone * if !pumvisible() | pclose | endif
