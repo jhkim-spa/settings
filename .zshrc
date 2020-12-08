@@ -41,6 +41,7 @@ bindkey '`' autosuggest-accept
 
 # Rename terminal title
 # ex) title s7
+DISABLE_AUTO_TITLE="true"
 precmd () { print -Pn "\e]0;$TITLE\a" }
 title() { export TITLE="$*" }
 alias vimrc='vim ~/.vimrc'
