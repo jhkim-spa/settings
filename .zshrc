@@ -28,9 +28,6 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# alias for trash-cli
-alias rm='trash'
-alias sd='sudo docker'
 
 export PATH="/usr/local/cuda/bin:$PATH"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64:$LD_LIBRARY_PATH"
